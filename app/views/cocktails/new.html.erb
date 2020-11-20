@@ -2,7 +2,9 @@
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
-  <%= f.submit "Submit Cocktail", class: "btn btn-primary w-100"%>
+  <%= f.input :photo, as: :file %>
+  <div class="d-flex">
+    <%= link_to "Cancel", cocktails_path, class: "btn btn-danger w-100 mr-1" %>
+    <%= f.submit "Submit", class: "btn btn-primary w-100"%>
+  </div>
 <% end %>
-
-<%= link_to "Cancel", cocktails_path %>

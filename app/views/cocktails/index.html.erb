@@ -2,9 +2,20 @@
 
 <ul class="list-group shadow-sm">
   <% @cocktails.each do |cocktail| %>
-    <li class="list-group-item"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <li class="list-group-item p-0 d-flex justify-content-between align-items-center">
+      <div>
+        <%= cl_image_tag cocktail.photo.key,
+      width: 50, height: 50, crop: :fill if cocktail.photo.attached?%>
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "link ml-2" %>
+      </div>
+      <div>
+          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"}, class: "trash pr-2" %>
+      </div>
+    </li>
   <% end %>
   <div class="d-flex justify-content-center">
     <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-primary w-100" %>
   </div>
 </ul>
+
+
