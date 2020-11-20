@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mordhincloud
+  api_key: '992878922421261'
+  api_secret: 8RKXFH7TiuQRkL1BQp5e9tQzlZ8
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: mordhincloud
+  api_key: '992878922421261'
+  api_secret: 8RKXFH7TiuQRkL1BQp5e9tQzlZ8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: mordhincloud
+  api_key: '992878922421261'
+  api_secret: 8RKXFH7TiuQRkL1BQp5e9tQzlZ8
+  enhance_image_tag: true
+  static_file_support: false
