@@ -3,7 +3,7 @@
   <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
   <%= f.input :description %>
   <div class="d-flex">
-    <%= link_to "Cancel", cocktail_path(@cocktail), class: "btn btn-danger w-100" %>
+    <%= link_to "Cancel", cocktail_path(@cocktail), class: "btn btn-danger w-100 mr-1" %>
     <%= f.submit "Submit", class: "btn btn-primary w-100"%>
   </div>
 <% end %>
